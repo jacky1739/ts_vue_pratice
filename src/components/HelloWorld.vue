@@ -31,14 +31,29 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue' // 定義一個新的方法來定義component 是一個函數
 
-export default defineComponent({
+// export default defineComponent({
+//   name: 'HelloWorld',
+//   props: {
+//     msg: String
+//   }
+// })
+
+const component = defineComponent({
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: {
+      required: true,
+      type: String
+    }
   }
+  // setup (props, context) {
+  //   props.msg
+  // }
 })
+
+export default component
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
